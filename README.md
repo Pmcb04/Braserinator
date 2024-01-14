@@ -25,6 +25,8 @@ El sistema a desarrollar consiste utilizar sensores en el salón o salita con un
 
 ## Material utilizado
 
+[Braserinator esquema general](../Braserinator/esquemas/braserinator_mqtt.drawio.png)
+
 - 5 ESP32
 - 1 sensor de temperatura
 - 1 emisor de infrarrojos
@@ -34,6 +36,7 @@ El sistema a desarrollar consiste utilizar sensores en el salón o salita con un
 - 2 resistencia de 10k Ohmios
 - 1 RasberryPi 3 Model B
 
+
 ## Para poder recrear el sistema
 
 - Se deberá cargar en cada una de las esp32 uno de programas que se encuentran en la carpeta */arduino*
@@ -42,7 +45,13 @@ El sistema a desarrollar consiste utilizar sensores en el salón o salita con un
 
 - Para la base de datos se encuentran en la carpeta */database* los script para MariaDB.
 
+- En la carpeta */esquemas* se encuentran los esquemas del cableado de todos los esp32 y un esquema general que ilustra el cambio de información en el sistema.
+
+
+## Aspectos a tener en cuenta 
+
+- Para la identificación del usuario se hace a traves de bluetooh por lo que es necesario tener un dispositivo movil. El usuario antes tendrá que haber metido su configuración en el portal cautivo a traves del codigo qr que se encuentra en la carpeta */arduino/CaptivePortal* o accediendo a la ip 192.168.50.238 que está configurado el portal cautivo.
+
+- La dirección del broker de mosquitto se tendrá que configurar por una nueva en cada uno de los esp32 que publique o se subcriba en algun topic, se tendrá entonces que cambiar la variable *mqtt_server* en los ficheros de los esp32.
+
 - Para probar el servicio de encendido de la televisión, esta tendra que ser modelo LG, pues es el modelo que esta programada hasta la fecha.
-
-
-
