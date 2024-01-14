@@ -24,3 +24,25 @@ El sistema a desarrollar consiste utilizar sensores en el salón o salita con un
 
 
 ## Material utilizado
+
+- 5 ESP32
+- 1 sensor de temperatura
+- 1 emisor de infrarrojos
+- 1 sensor de luminosidad
+- 1 anillo LED RGB
+- 1 sensor de presión
+- 2 resistencia de 10k Ohmios
+- 1 RasberryPi 3 Model B
+
+## Para poder recrear el sistema
+
+- Se deberá cargar en cada una de las esp32 uno de programas que se encuentran en la carpeta */arduino*
+
+- Se deberá pasar los ficheros que se encuentran en la carpeta */server* en la rasberry pi, además de tener instalado MariaDB y el broker de Mosquitto.
+
+- Para la base de datos se encuentran en la carpeta */database* los script para MariaDB.
+
+- Para probar el servicio de encendido de la televisión, esta tendra que ser modelo LG, pues es el modelo que esta programada hasta la fecha.
+
+
+
